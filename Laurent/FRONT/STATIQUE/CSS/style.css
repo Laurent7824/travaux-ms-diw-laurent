@@ -1,0 +1,250 @@
+html {
+    position: relative;
+    background: #C5D9DC;
+}
+
+#logo {
+    width: 200px;
+    height: 144px;
+}
+
+header {
+    background-color: #4340B4;
+    position: relative;
+    width: 100%;
+    height: 143px;
+    left: 0px;
+    top: 0px;
+}
+
+
+/* Style de base pour la recherche */
+
+#search {
+    position: absolute;
+    width: 141px;
+    height: 29px;
+    left: 1460px;
+    top: 303px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: center;
+    color: #000000;
+    z-index: 1;
+    background-color: aquamarine;
+
+}
+
+/* Style du bouton de recherche*/
+
+#button {
+    width: 130px;
+    height: 29px;
+    position: relative;
+    left: 1620px;
+    top: 157px;
+    z-index: 1;
+    background-color: red;
+    color: white;
+    font-size: 15px;
+}
+
+.entete {
+    position: absolute;
+    width: 100%;
+    height: 237px;
+    left: 0px;
+    top: 143px;
+    object-fit: cover;
+}
+
+ul {
+    display: inline flex;
+    position: absolute;
+    width: 147px;
+    height: 48px;
+    left: 288px;
+    top: 57px;
+    list-style-type: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+li {
+    position: relative;
+    right: 160px;
+    bottom: 50px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    text-decoration-line: underline;
+    min-width: 400px;
+
+}
+
+a {
+    color: white;
+}
+
+/* Les photos par catégorie*/
+
+.cat1 {
+    position: absolute;
+    width: 170px;
+    height: 154px;
+    left: 116px;
+    top: 410px;
+}
+
+.cat2 {
+    position: absolute;
+    width: 170px;
+    height: 154px;
+    left: 740px;
+    top: 410px;
+
+
+}
+
+.cat3 {
+    position: absolute;
+    width: 170px;
+    height: 154px;
+    left: 1400px;
+    top: 410px;
+}
+
+.cat4 {
+    position: absolute;
+    width: 170px;
+    height: 154px;
+    left: 116px;
+    top: 614px;
+}
+
+.cat5 {
+    position: absolute;
+    width: 170px;
+    height: 154px;
+    left: 740px;
+    top: 614px;
+}
+
+.cat6 {
+    position: absolute;
+    width: 170px;
+    height: 154px;
+    left: 1400px;
+    top: 614px;
+}
+
+/* Les photos par plats */
+
+.plat1 {
+    position: absolute;
+    width: 170px;
+    height: 86px;
+    left: 119px;
+    top: 808px;
+}
+
+.plat2 {
+    position: absolute;
+    width: 170px;
+    height: 86px;
+    left: 740px;
+    top: 808px;
+}
+
+.plat3 {
+    position: absolute;
+    width: 170px;
+    height: 86px;
+    left: 1400px;
+    top: 808px;
+}
+
+/*Réseaux sociaux*/
+
+footer {
+    background: #ffffff;
+    border: 3px solid #000000;
+}
+
+.fb {
+    position: absolute;
+    width: 43px;
+    height: 42px;
+    left: 345px;
+    top: 967px;
+}
+
+.instagram {
+    position: absolute;
+    width: 51px;
+    height: 42px;
+    left: 433px;
+    top: 967px;
+}
+
+.twitter {
+    position: absolute;
+    width: 51px;
+    height: 42px;
+    left: 527px;
+    top: 967px;
+}
+
+.snapchat {
+    position: absolute;
+    width: 60px;
+    height: 42px;
+    left: 620px;
+    top: 967px;
+}
+
+.whatsapp {
+    position: absolute;
+    width: 59px;
+    height: 42px;
+    left: 725px;
+    top: 967px;
+
+
+}
+
+.skype {
+    position: absolute;
+    width: 51px;
+    height: 42px;
+    left: 827px;
+    top: 967px;
+}
+
+.pinterest {
+    position: absolute;
+    width: 52px;
+    height: 45px;
+    left: 933px;
+    top: 967px;
+}
+
+.mentions {
+    position: absolute;
+    width: 71px;
+    height: 44px;
+    left: 1010px;
+    top: 965px;
+}
