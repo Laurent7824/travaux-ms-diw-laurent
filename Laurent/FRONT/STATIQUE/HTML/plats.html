@@ -12,37 +12,56 @@
 
 <body>
     <header>
-
-        <nav class="navbar navbar-expand-lg bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
             <div class="container-fluid">
-                <img src="Img/the_district_brand/logo.png" width="80px" id="logo" alt="logo_district">
+                <a class="navbar-brand" href="/Laurent/FRONT/STATIQUE/HTML/index.html">
+                    <img src="/Laurent/FRONT/STATIQUE/HTML/Img/the_district_brand/logo.png" width=80px alt="Logo">
+                </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-5 px-5">
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="index.html">
+                            <a class="nav-link active text-white" aria-current="page"
+                                href="/Laurent/FRONT/STATIQUE/HTML/index.html">
                                 <h3>Accueil</h3>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="categorie.html">
+                            <a class="nav-link active text-white" href="/Laurent/FRONT/STATIQUE/HTML/categorie.html">
                                 <h3>Catégorie</h3>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="plats.html">
-                                <h3>Plats</h3>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white"
+                                href="/Laurent/FRONT/STATIQUE/HTML/plats.html id=" navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <h3>
+                                    Plats
+                                </h3>
                             </a>
-                        </li>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/Laurent/FRONT/STATIQUE/HTML/laCarte.html">A la carte
+                                        !!!
+                                    </a></li>
+                                <li><a class="dropdown-item"
+                                        href="/Laurent/FRONT/STATIQUE/HTML/ficheCommande.html">Formulaire
+                                        de commande</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="/Laurent/FRONT/STATIQUE/HTML/plats.html">Type de
+                                        plat</a></li>
+                            </ul>
                         <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="contact.html">
+                            <a class="nav-link active text-white" href="/Laurent/FRONT/STATIQUE/HTML/contact.html">
                                 <h3>Contact</h3>
                             </a>
+                        </li>
                         </li>
                     </ul>
                 </div>

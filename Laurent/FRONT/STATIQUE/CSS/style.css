@@ -1,11 +1,61 @@
+.nav-item:hover {
+    background-color: #d2b4de;
+    /* Couleur de fond au survol des onglets */
+}
+
+.dropdown-item:hover {
+    background-color: #008080;
+    /* Couleur de fond au survol */
+}
+
+.content {
+    background-image: url("/Laurent/FRONT/STATIQUE/HTML/Img/image\ fond\ restaurant.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    opacity: 0.7;
+}
+
+.parallax-container {
+    position: relative;
+    height: 25vh;
+    /* ou une hauteur personnalisée */
+    overflow: hidden;
+}
+
+.parallax-container video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+h1 {
+    color: #FF00FF;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    text-decoration: underline
+}
+
+p {
+    font-size: 20px;
+}
+
 .img-cat {
     width: 300px;
     height: 200px;
 
 
 }
-
-
 
 .img-plat {
     width: 300px;
@@ -21,7 +71,7 @@
     object-fit: cover;
 }
 
-.rs{
+.rs {
     width: 50px;
 }
 
@@ -37,3 +87,91 @@
 .img-cat:hover {
     transform: scale(1.2);
 }
+
+.input-group {
+    width: 200px;
+}
+
+.cadre {
+    border: 2px solid black;
+    width: 720px;
+}
+
+.btn-send {
+    float: right;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 20px;
+}
+
+.card-text {
+    color: #888;
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.prix {
+    border: 1px solid black;
+    width: 100px;
+    text-align: center;
+    color: white;
+    background-color: red;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.blinking-title {
+    animation: blink 1s infinite;
+}
+
+.error {
+    color:red;
+    font-size: 20px;
+}
+
+.error-message {
+    color: red;
+}
+
+#successMessage {
+    color: blue;
+}
+
