@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Carrousel Bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Laurent/FRONT/STATIQUE/CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/Laurent/FRONT/STATIQUE/HTML/index.html">
+                    <img src="/Laurent/FRONT/STATIQUE/HTML/Img/the_district_brand/logo.png" width=80px alt="Logo">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page"
+                                href="/Laurent/FRONT/STATIQUE/HTML/index.html">
+                                <h3>Accueil</h3>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" href="/Laurent/FRONT/STATIQUE/HTML/categorie.html">
+                                <h3>Catégorie</h3>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white"
+                                href="/Laurent/FRONT/STATIQUE/HTML/plats.html id=" navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <h3>
+                                    Plats
+                                </h3>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/Laurent/FRONT/STATIQUE/HTML/carousel.html"> Présentation des plats en carousel
+                                        
+                                    </a></li>
+                                <li><a class="dropdown-item"
+                                        href="/Laurent/FRONT/STATIQUE/HTML/ficheCommande.html">Formulaire
+                                        de commande</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="/Laurent/FRONT/STATIQUE/HTML/plats.html">Type de
+                                        plat</a>
+                                </li>
+                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" href="/Laurent/FRONT/STATIQUE/HTML/contact.html">
+                                <h3>Contact</h3>
+                            </a>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <img src="Img/the_district_brand/facebook_cover_photo_2.png" width=100px class="entete">
+    </header>
+    <br>
+    <h1>Présentation en Carrousel pour les catégories :</h1>
+    <br>
+    <!DOCTYPE html>
+    <html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carrousel Bootstrap</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    </head>
+
+    <body>
+
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                        <img src="/Laurent/FRONT/STATIQUE/HTML/Img/food/cesar_salad.jpg" alt="Image 1" width="800px" height="800px">
+                        <div class="carousel-caption">
+                            <a href="#" id="lien_titre">César_salad</a>
+                            <p>Commentaire sur l'image 1</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                        <img src="/Laurent/FRONT/STATIQUE/HTML/Img/food/hamburger.jpg" alt="Image 2" width="800px" height="800px">
+                        <div class="carousel-caption">
+                            <a href="#"id="lien_titre">Hamburger</a>
+                            <p>Commentaire sur l'image 2</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                        <img src="/Laurent/FRONT/STATIQUE/HTML/Img/food/courgettes_farcies.jpg" alt="Image 3" width="800px" height="800px">
+                        <div class="carousel-caption">
+                            <a href="#" id="lien_titre">Courgettes_farcies</a>
+                            <p>Commentaire sur l'image 3</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                        <img src="/Laurent/FRONT/STATIQUE/HTML/Img/food/lasagnes_viande.jpg" alt="Image 4" width="800px" height="800px">
+                        <div class="carousel-caption">
+                            <a href="#" id="lien_titre">Lasagnes_viande</a>
+                            <p>Commentaire sur l'image 4</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                        <img src="/Laurent/FRONT/STATIQUE/HTML/Img/food/pizza-margherita.jpg" alt="Image 5" width="800px" height="800px">
+                        <div class="carousel-caption">
+                            <a href="#" id="lien_titre">Pizza-margherita</a>
+                            <p>Commentaire sur l'image 5</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Précédent</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Suivant</span>
+            </a>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+    </html>
+
+    <footer">
+        <div class="container text-center" id="footer">
+            <div class="row">
+                <div class="col">
+                    <img src="Img/Réseaux sociaux/Facebook_f_logo_(2019).svg.png" alt="facebook"
+                        class="img-fluid me-3 rs">
+
+
+                    <img src="Img/Réseaux sociaux/instagram-png-instagram-png-logo-1455-12.png" alt="instagram"
+                        class="img-fluid me-3 rs">
+
+
+                    <img src="Img/Réseaux sociaux/Twitter.png" alt="twitter" class="img-fluid me-3 rs">
+
+                    <img src="Img/Réseaux sociaux/Snapchat.png" alt="snapchat" class="img-fluid me-3 rs">
+                </div>
+            </div>
+        </div>
+        <br>
+        </footer>
+        </div>
+        <script src="/Laurent/FRONT/DYNAMIQUE/JAVASCRIPT/fichier.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

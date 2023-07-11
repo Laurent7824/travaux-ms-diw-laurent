@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulaire de contact</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Formulaire de contact</h1>
+        <br>
+        <form action="/Laurent/BACK/SERVEUR/PHP/traitement.php" method="post" id="contactForm">
+            <div class="mb-3">
+                <label for="societe" class="form-label">Société:</label>
+                <input type="text" class="form-control" id="societe" name="societe" minlength="1">
+                <span id="societeError" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="personne" class="form-label">Personne à contacter:</label>
+                <input type="text" class="form-control" id="personne" name="personne" minlength="1">
+                <span id="personneError" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="codepostal" class="form-label">Code postal:</label>
+                <input type="text" class="form-control" id="codepostal" name="codepostal" pattern="[0-9]{5}">
+                <span id="codepostalError" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="ville" class="form-label">Ville:</label>
+                <input type="text" class="form-control" id="ville" name="ville" minlength="1">
+                <span id="villeError" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email">
+                <span id="emailError" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="telephone" class="form-label">Téléphone:</label>
+                <input type="text" class="form-control" id="telephone" name="telephone" pattern="[0-9]{10}">
+                <span id="telephoneError" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="selection" class="form-label">Sélectionnez l'environnement technique du projet:</label>
+                <textarea class="form-control" id="selection" name="selection" rows="4"></textarea>
+            </div>
+            <div class="mb-3">
+                <select class="form-select" id="environnement" name="environnement">
+                    <option value="">Choisissez !!!</option>
+                    <option value="technique1">Access</option>
+                    <option value="technique2">Java </option>
+                    <option value="technique3">Delphi</option>
+                    <option value="technique4">Windev</option>
+                    <option value="technique5">Visual Basic</option>
+                    <option value="technique6">Power Builder</option>
+                    <option value="technique7">Internet</option>
+                    <option value="technique8">Intranet</option>
+                    <option value="technique9">Window NT</option>
+                    <option value="technique10">Unix</option>
+                    <option value="technique11">SQL Server</option>
+                    <option value="technique12">Oracle</option>
+                    <option value="technique13">Autres... </option>
+
+                </select>
+                <span id="environnementError" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <button type="submit" class="btn btn-success me-md-2">Envoyer</button>
+                <button type="reset" class="btn btn-danger">Effacer</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire pour l'instant
+
+            // Récupération des valeurs des champs de saisie
+            var societe = document.getElementById("societe").value;
+            var personne = document.getElementById("personne").value;
+            var codepostal = document.getElementById("codepostal").value;
+            var ville = document.getElementById("ville").value;
+            var email = document.getElementById("email").value;
+            var telephone = document.getElementById("telephone").value;
+            var environnement = document.getElementById("environnement").value;
+
+            // Réinitialisation des messages d'erreur
+            var errorElements = document.getElementsByClassName("text-danger");
+            for (var i = 0; i < errorElements.length; i++) {
+                errorElements[i].innerHTML = "";
+            }
+
+            // Validation des champs de saisie
+            var isValid = true;
+
+            if (societe === "") {
+                document.getElementById("societeError").innerHTML = "Veuillez saisir le nom de la société svp !!!.";
+                isValid = false;
+            }
+
+            if (personne === "") {
+                document.getElementById("personneError").innerHTML = "Veuillez saisir le nom de la personne à contacter svp !!!.";
+                isValid = false;
+            }
+
+            if (codepostal === "" || !/^[0-9]{5}$/.test(codepostal)) {
+                document.getElementById("codepostalError").innerHTML = "Veuillez saisir un code postal valide sur 5 chiffres svp !!!.";
+                isValid = false;
+            }
+
+            if (ville === "") {
+                document.getElementById("villeError").innerHTML = "Veuillez saisir le nom de la ville.";
+                isValid = false;
+            }
+
+            if (email === "" || email.indexOf("@") === -1) {
+                document.getElementById("emailError").innerHTML = "Veuillez saisir une adresse email valide.";
+                isValid = false;
+            }
+
+            if (telephone === "" || !/^[0-9]{10}$/.test(telephone)) {
+                document.getElementById("telephoneError").innerHTML = "Veuillez saisir un numéro de téléphone valide.";
+                isValid = false;
+            }
+
+            if (environnement === "") {
+                document.getElementById("environnementError").innerHTML = "Veuillez sélectionner un environnement technique.";
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Tous les champs sont valides, le formulaire peut être envoyé
+                alert("Formulaire envoyé avec succès !!!");
+                document.getElementById("contactForm").reset(); // Réinitialisation du formulaire
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

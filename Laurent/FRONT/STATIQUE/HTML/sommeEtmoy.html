@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somme et moyenne</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var valeurs = [];
+        var valeur;
+
+        do {
+            valeur = parseFloat(window.prompt("Entrez une valeur numérique (ou 0 pour arrêter)"));
+
+            if (valeur !== 0 && !isNaN(valeur)) {
+                valeurs.push(valeur);
+            }
+        } while (valeur !== 0);
+
+        var nombreValeurs = valeurs.length;
+        var somme = valeurs.reduce(function (a, b) {
+            return a + b;
+        }, 0);
+        var moyenne = somme / nombreValeurs;
+
+        var tableau = document.createElement("table");
+        var tbody = document.createElement("tbody");
+
+        // En-tête du tableau
+        var enTete = document.createElement("tr");
+        var enTeteCellule1 = document.createElement("th");
+        enTeteCellule1.textContent = "Valeur";
+        enTete.appendChild(enTeteCellule1);
+        tbody.appendChild(enTete);
+
+        // Lignes de valeurs
+        for (var i = 0; i < nombreValeurs; i++) {
+            var ligne = document.createElement("tr");
+            var cellule = document.createElement("td");
+            cellule.textContent = valeurs[i];
+            ligne.appendChild(cellule);
+            tbody.appendChild(ligne);
+        }
+
+        tableau.appendChild(tbody);
+        document.body.appendChild(tableau);
+
+        var infos = document.createElement("p");
+        infos.textContent = "Nombre de valeurs saisies : " + nombreValeurs + "\nSomme : " + somme + "\nMoyenne : " + moyenne.toFixed(2);
+        document.body.appendChild(infos);
+    </script>
+
+</body>
+
+</html>
+</body>
+
+</html>

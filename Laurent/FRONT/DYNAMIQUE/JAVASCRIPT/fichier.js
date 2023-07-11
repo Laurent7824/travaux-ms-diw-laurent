@@ -1,60 +1,74 @@
-const form = document.getElementById('myForm');
-        const successMessage = document.getElementById('successMessage');
+// Fonctionement du formulaire de commande
 
-        form.addEventListener('submit', function (event) {
-            event.preventDefault();
-            if (validateForm()) {
-                alert(successMessage.textContent = "Formulaire soumis avec succès !!!");
-                form.reset();
-            } else {
-                successMessage.textContent = "";
-            }
-        });
+document.getElementById('myForm').addEventListener('submit', function (event) {
+    var nomPrenom = document.getElementById('nomPrenom');
+    var telephone = document.getElementById('telephone');
+    var email = document.getElementById('email');
+    var adresse = document.getElementById('adresse');
 
-        function validateForm() {
-            let isValid = true;
-            const nameInput = document.getElementById('name');
-            const telInput = document.getElementById('tel');
-            const emailInput = document.getElementById('email');
-            const addressInput = document.getElementById('address');
+    var nomPrenomError = document.getElementById('nomPrenomError');
+    var telephoneError = document.getElementById('telephoneError');
+    var emailError = document.getElementById('emailError');
+    var adresseError = document.getElementById('adresseError');
 
-            const nameError = document.getElementById('nameError');
-            const telError = document.getElementById('telError');
-            const emailError = document.getElementById('emailError');
-            const addressError = document.getElementById('addressError');
+    var formIsValid = true; // Ajout de cette variable pour vérifier si le formulaire est valide
 
-            nameError.textContent = "";
-            telError.textContent = "";
-            emailError.textContent = "";
-            addressError.textContent = "";
+    var nomPrenomRegex = /^[a-zA-Z]+\s[a-zA-Z]+$/; // Format : Lettres + Espace + Lettres
+    var telephoneRegex = /^\d{10}$/; // Format : 10 chiffres
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Format : Email valide
 
-            if (nameInput.value.trim() === "") {
-                nameError.textContent = "Veuillez saisir votre nom et prénom valide";
-                isValid = false;
-            }
+    if (nomPrenom.value.trim() === '') {
+        nomPrenomError.innerText = 'Veuillez saisir votre Nom et Prénom valide.';
+        formIsValid = false; // Le formulaire n'est pas valide
+    } else if (!nomPrenomRegex.test(nomPrenom.value.trim())) {
+        nomPrenomError.innerText = 'Le format du Nom et Prénom est invalide.';
+        formIsValid = false; // Le formulaire n'est pas valide
+    } else {
+        nomPrenomError.innerText = '';
+    }
 
-            if (telInput.value.trim() === "") {
-                telError.textContent = "Veuillez saisir votre numéro de téléphone valide";
-                isValid = false;
-            }
+    if (telephone.value.trim() === '') {
+        telephoneError.innerText = 'Veuillez saisir votre numéro de téléphone valide.';
+        formIsValid = false; // Le formulaire n'est pas valide
+    } else if (!telephoneRegex.test(telephone.value.trim())) {
+        telephoneError.innerText = 'Le format du Téléphone est invalide.';
+        formIsValid = false; // Le formulaire n'est pas valide
+    } else {
+        telephoneError.innerText = '';
+    }
 
-            if (emailInput.value.trim() === "") {
-                emailError.textContent = "Veuillez saisir votre adresse email valide";
-                isValid = false;
-            } else if (!isValidEmail(emailInput.value.trim())) {
-                emailError.textContent = "Veuillez saisir une adresse email valide";
-                isValid = false;
-            }
+    if (email.value.trim() === '') {
+        emailError.innerText = 'Veuillez rentrer votre Email valide.';
+        formIsValid = false; // Le formulaire n'est pas valide
+    } else if (!emailRegex.test(email.value.trim())) {
+        emailError.innerText = 'Le format de l\'Email est invalide.';
+        formIsValid = false; // Le formulaire n'est pas valide
+    } else {
+        emailError.innerText = '';
+    }
 
-            if (addressInput.value.trim() === "") {
-                addressError.textContent = "Veuillez saisir votre adresse valide";
-                isValid = false;
-            }
+    if (adresse.value.trim() === '') {
+        adresseError.innerText = 'Veuillez rentrer votre adresse valide.';
+        formIsValid = false; // Le formulaire n'est pas valide
+    } else {
+        adresseError.innerText = '';
+    }
 
-            return isValid;
-        }
+    if (formIsValid) {
+        // Tous les champs sont valides, afficher une fenêtre de dialogue
+        alert('Formulaire soumis avec succès !!!');
+    } else {
+        event.preventDefault(); // Empêche l'envoi du formulaire si des champs sont vides ou au mauvais format
+    }
+});
 
-        function isValidEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
+//Fonctionement du Carrousel
+
+var myCarousel = document.getElementById('#carouselCategorieControls');
+var carousel = new bootstrap.Carousel(myCarousel, {
+    interval: 1000, // Temps de défilement entre les images (en millisecondes)
+    wrap: true // Permet de boucler le carrousel
+});
+
+
+

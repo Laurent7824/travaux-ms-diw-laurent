@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clic sur le bouton</title>
+    <style>
+        /* Style pour le titre */
+        h1 {
+            font-size: 24px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Titre de la page -->
+    <h1>Saisissez un texte puis presser le bouton 'Contrôle' ?</h1>
+    <br>
+    <!-- Champ de texte pour saisir du texte -->
+    <input type="text" id="texteSaisi">
+    <!-- Bouton "Contrôler" -->
+    <button id="boutonControle" onclick="afficherFenetreInformation()">Contrôler</button>
+    <script>
+        // Fonction d'affichage de la fenêtre d'information
+        function afficherFenetreInformation() {
+            // Récupérer le texte saisi dans le champ de texte
+            var texteSaisi = document.getElementById("texteSaisi").value;
+            // Afficher une fenêtre d'information avec le texte saisi
+            alert("Vous avez saisi : " + texteSaisi);
+        }
+    </script>
+</body>
+
+</html>
