@@ -248,7 +248,8 @@ p {
 }
 
 .carousel-inner {
-    max-width: auto; /*Ajuster la largeur du carousel selon vos besoins */
+    max-width: auto;
+    /*Ajuster la largeur du carousel selon vos besoins */
     width: 100%;
 }
 
@@ -298,22 +299,41 @@ p {
 
 /* Animation du titre "Nous contacter" dans le formulaire*/
 .scrolling-title {
-    white-space: nowrap; /* Empêche le retour à la ligne */
-    overflow: hidden; /* Masque le contenu qui dépasse */
-    width: 70%; /* Ajuste la largeur du conteneur */
-    animation: scrolling-text 7s linear infinite; /* Applique l'animation */
-    color:indigo;
+    white-space: nowrap;
+    /* Empêche le retour à la ligne */
+    overflow: hidden;
+    /* Masque le contenu qui dépasse */
+    width: 100%;
+    /* Ajuste la largeur du conteneur */
+    animation: scrolling-text 7s linear infinite;
+    /* Applique l'animation */
+    color: indigo;
     font-size: 40px;
-  }
-  
-  @keyframes scrolling-text {
+}
+
+@keyframes scrolling-text {
     0% {
-      transform: translateX(-100%); /* Décale le titre complètement vers la gauche */
-    }
-    100% {
-      transform: translateX(100%); /* Décale le titre complètement vers la droite*/
+        transform: translateX(-100%);
+        /* Décale le titre complètement vers la gauche */
     }
 
+    100% {
+        transform: translateX(100%);
+        /* Décale le titre complètement vers la droite*/
+    }
+
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+.form-control.error {
+    border-color: red;
   }
-  
- 
