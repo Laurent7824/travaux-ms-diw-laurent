@@ -295,3 +295,25 @@ p {
     width: 400px;
     background-color: bisque
 }
+
+/* Animation du titre "Nous contacter" dans le formulaire*/
+.scrolling-title {
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    overflow: hidden; /* Masque le contenu qui dépasse */
+    width: 70%; /* Ajuste la largeur du conteneur */
+    animation: scrolling-text 7s linear infinite; /* Applique l'animation */
+    color:indigo;
+    font-size: 40px;
+  }
+  
+  @keyframes scrolling-text {
+    0% {
+      transform: translateX(-100%); /* Décale le titre complètement vers la gauche */
+    }
+    100% {
+      transform: translateX(100%); /* Décale le titre complètement vers la droite*/
+    }
+
+  }
+  
+ 
