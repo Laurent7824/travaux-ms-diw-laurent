@@ -1,4 +1,4 @@
-    <div class="container text-center" id="footer">
+    <div class="container mt-auto text-center" id="footer">
         <div class="row">
             <div class="col">
                 <svg xmlns="http://www.w3.org/2000/svg" height="40" fill="currentColor" class="bi bi-facebook me-4" viewBox="0 0 16 16">

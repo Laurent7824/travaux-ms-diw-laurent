@@ -1,7 +1,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand" href="/Laurent/FRONT/STATIQUE/">
-                <img src="/Laurent/FRONT/STATIQUE/HTML/Img/the_district_brand/logo.png" width=100px alt="Logo">
+                <img src="logo.png" width=100px alt="Logo">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,4 +59,4 @@
             </div>
         </div>
     </nav>
-    <img src="Img/the_district_brand/facebook_cover_photo_2.png" width=100px class="entete">
+    <img src="facebook_cover_photo_2.png" width=100px class="entete" alt="image">

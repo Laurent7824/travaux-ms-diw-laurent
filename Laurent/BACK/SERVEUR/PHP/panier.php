@@ -40,12 +40,12 @@
         [
             'name' => 'Saveur Asie',
             'price' => 8.99,
-            'quantity' => 1
+            'quantity' => 3
         ],
         [
             'name' => 'Pâtes',
             'price' => 7.99,
-            'quantity' => 1
+            'quantity' => 4
         ],
         [
             'name' => 'Sandwich',
@@ -56,12 +56,19 @@
             'name' => 'Salades',
             'price' => 6.99,
             'quantity' => 1
-        ]
+        ],
+        [
+            'name' => 'Burger',
+            'price' => 12,
+            'quantity' => 2
+        ],
+
     ];
     ?>
 
     <div class="container">
         <h1>Panier de commande</h1>
+        <br>
         <table class="table">
             <thead>
                 <tr class="table-primary">
