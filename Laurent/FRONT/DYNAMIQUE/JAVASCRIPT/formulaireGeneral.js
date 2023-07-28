@@ -19,13 +19,14 @@ form.addEventListener("submit", validateForm);
 
 // Fonction pour valider le formulaire
 function validateForm(e) {
-    e.preventDefault(); // Empêche l'envoi du formulaire par défaut
+    // e.preventDefault(); // Empêche l'envoi du formulaire par défaut
   
         // Parcourir chaque champ de saisie pour vérifier s'il est vide ou non
         inputs.forEach(input => {
             if (input.value.trim() === "") { // Si le champ est vide (après suppression des espaces avant et après)
                 input.classList.add("error"); // Ajout de la classe "error" pour appliquer un style d'erreur
                 isValid = false; // Le formulaire n'est pas valide car il y a au moins un champ vide
+                e.preventDefault(); // Empêche l'envoi du formulaire par défaut
             } else {
                 input.classList.remove("error"); // Suppression de la classe "error" si le champ n'est pas vide
             }
@@ -45,6 +46,7 @@ function validateForm(e) {
         emailInput.classList.add("error"); // Ajout de la classe "error" pour indiquer une erreur dans le champ d'e-mail
         emailError.classList.remove("d-none"); // Affichage de l'élément d'erreur lié à l'adresse e-mail
         isValid = false; // Le formulaire n'est pas valide car l'adresse e-mail est incorrecte
+        e.preventDefault(); // Empêche l'envoi du formulaire par défaut
     } else {
         emailInput.classList.remove("error"); // Suppression de la classe "error" si l'adresse e-mail est valide
         emailError.classList.add("d-none"); // Masquage de l'élément d'erreur lié à l'adresse e-mail
@@ -57,6 +59,7 @@ function validateForm(e) {
         telephoneInput.classList.add("error"); // Ajout de la classe "error" pour indiquer une erreur dans le champ de téléphone
         telephoneError.classList.remove("d-none"); // Affichage de l'élément d'erreur lié au numéro de téléphone
         isValid = false; // Le formulaire n'est pas valide car le numéro de téléphone est incorrect
+        e.preventDefault(); // Empêche l'envoi du formulaire par défaut
     } else {
         telephoneInput.classList.remove("error"); // Suppression de la classe "error" si le numéro de téléphone est valide
         telephoneError.classList.add("d-none"); // Masquage de l'élément d'erreur lié au numéro de téléphone
